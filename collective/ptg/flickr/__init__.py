@@ -298,7 +298,7 @@ class FlickrAdapter(BaseAdapter):
         return iter(photos)
 
     def get_mini_photo_url(self, photo):
-        return "http://farm%s.static.flickr.com/%s/%s_%s_s.jpg" % (
+        return "//farm%s.static.flickr.com/%s/%s_%s_s.jpg" % (
             photo.get('farm'),
             photo.get('server'),
             photo.get('id'),
@@ -306,13 +306,13 @@ class FlickrAdapter(BaseAdapter):
         )
 
     def get_photo_link(self, photo):
-        return "http://www.flickr.com/photos/%s/%s/sizes/o/" % (
+        return "//www.flickr.com/photos/%s/%s/sizes/o/" % (
             self.settings.flickr_username,
             photo.get('id')
         )
 
     def get_large_photo_url(self, photo):
-        return "http://farm%s.static.flickr.com/%s/%s_%s%s.jpg" % (
+        return "//farm%s.static.flickr.com/%s/%s_%s%s.jpg" % (
             photo.get('farm'),
             photo.get('server'),
             photo.get('id'),
